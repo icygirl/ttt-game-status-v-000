@@ -46,6 +46,13 @@ def over?(board)
 end
 
 def winner?(board)
-  if won?(board) == winning_play
+  if won?(board)
+    WIN_COMBINATIONS.any do |winner|
+      if winner == X
+        true
+      end
+    else
+      false
+    end
   end
 end
