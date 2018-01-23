@@ -46,13 +46,7 @@ def over?(board)
 end
 
 def winner?(board)
-  if won?(board)
-    WIN_COMBINATIONS.any do |winner|
-      if winner == X
-        true
-      end
-    else
-      false
-    end
+  if won?(board) == winner
+    board[winner.first]
   end
 end
